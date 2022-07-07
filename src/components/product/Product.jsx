@@ -1,21 +1,27 @@
 import React from 'react'
 import "./product.css"
+import { AiFillStar } from "react-icons/ai";
 
-const Product = () => {
+const Product = ({title, image, price, rating, }) => {
+  const imgLink = "images-na.ssl-images-amazon.com/images/I/51zymoq7UnL._AC_SY400_.jpg";
   return (
     <div className="product">
       <div className="product__info">
-        <p>book</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>$</small>
-          <strong>500</strong>
+          <strong>{price}</strong>
         </p>
         <div className="product__rating">
-          4
+            {Array(rating)
+              .fill()
+              .map((_) => (
+                <AiFillStar className="rating"/>
+              ))}
         </div>
       </div>
-        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
-        <button >Add to basket</button>
+        <img src={image} alt="" />
+        <button className=''>Add to basket</button>
     </div>
   )
 }

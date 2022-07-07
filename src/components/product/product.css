@@ -11,16 +11,6 @@
     width: 100%;
     z-index: 1;
 }
-
-.product > img {
-    max-height: 200px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-
-
 .product__price {
     margin-top: 5px;
 }
@@ -31,12 +21,22 @@
     height: 100px;
     margin-bottom: 15px;
 }
+.product > img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 
+.rating{
+    color: #febf1e;
+}
 .product > button {
     background: #f0c14b;
-    border: none;
+    border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
     border-radius: 2px;
+    width: 55%;
     height: 30px;
     margin-top: 10px;
     cursor: pointer;

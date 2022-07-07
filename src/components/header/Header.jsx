@@ -1,13 +1,14 @@
 import "./header.css";
 import React from 'react'
 import { BsSearch, BsFillBasket2Fill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <nav className="header">
-        <a href="/" >
+        <Link to={`/`}>
             <img className="header__logo" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo"/>
-        </a>
+        </Link>
 
         <div className="header__search">
             <input type="text" className="header__searchInput" />
@@ -39,15 +40,15 @@ const Header = () => {
                     </div>
                 </a>
                 {/* 4th link */}
-                <a href="/" className="header__link">
+                <Link to={`/checkout`} className="header__link">
                     <div className="header__optionBasket"></div>
                         {/* Shopping Basket Icon */}
                         <i>
                             <BsFillBasket2Fill />
                         </i>
                         {/* Number of items in the basket */}
-                        <span className="header__basketCount">6</span>
-                </a>
+                        <span className="header__basketCount">0</span>
+                </Link>
             </div>
     </nav>
   )

@@ -11,16 +11,9 @@ const Home = () => {
                 src="https:images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
                 alt="amazon prime background"
             />
-
             {/* Product id, title, price, rating, image*/}
             <div className="home__row">
-            <Product 
-                    id="345678"
-                    title="Sony PS5"
-                    price={499.99}
-                    rating={5}
-                    image="https://www.psu.com/wp/wp-content/uploads/2020/07/PS5-5-4-1024x576.jpg" 
-                />
+            
                 <Product 
                     id="1232343"
                     title="NexiGo 2020 Playstation 4 PS4 Slim 1TB Console Holiday Bundle Charging Dock Bundle"
@@ -37,12 +30,12 @@ const Home = () => {
                 />
             </div>
             <div className="home__row">
-                <Product 
-                    id="345678"
-                    title="Sony PS5"
-                    price={499.99}
+            <Product 
+                    id="1232343"
+                    title="NexiGo 2020 Playstation 4 PS4 Slim 1TB Console Holiday Bundle Charging Dock Bundle"
+                    price={479.00}
                     rating={5}
-                    image="https://www.psu.com/wp/wp-content/uploads/2020/07/PS5-5-4-1024x576.jpg" 
+                    image="https://m.media-amazon.com/images/I/61W0a8kxbML._AC_UY218_.jpg" 
                 />
                 <Product 
                     id="1232343"
