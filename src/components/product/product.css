@@ -31,12 +31,12 @@
 .rating{
     color: #febf1e;
 }
-.product > button {
+.product_button {
     background: #f0c14b;
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29;
     border-radius: 2px;
-    width: 55%;
+    padding: 5px;
     height: 30px;
     margin-top: 10px;
     cursor: pointer;

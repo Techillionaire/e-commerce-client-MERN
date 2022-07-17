@@ -24,9 +24,10 @@
     width: 100%;
 }
 .header__searchIcon {
-    background-color: #cd9042;
+    background-color: #febf1e;
     padding: 5px;
     height: 22px !important;
+    cursor: pointer;
 }
 .header__nav {
     display: flex;
@@ -53,10 +54,11 @@
 .header__optionBasket {
     display: flex;
     align-items: center;
+    margin-top: 7px;
 }
 .header__basketCount{
-    margin-left: 10px;
+    margin-left: 5px;
     margin-right: 10px;
-    font-size: 13px;
-    font-weight: 800;
+    font-size: 15px;
+    font-weight: bold;
 }

@@ -2,8 +2,17 @@ import "./header.css";
 import React from 'react'
 import { BsSearch, BsFillBasket2Fill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../app/StateProvider";
+import { auth } from "../../firebase";
 
 const Header = () => {
+    const [{ basket, user }] = useStateValue();
+    const login = () => {
+        if (user) {
+            auth.signOut();
+        }
+    };
+
   return (
     <nav className="header">
         <Link to={`/`}>
@@ -19,26 +28,26 @@ const Header = () => {
 
         <div className="header__nav">
                 {/* 1st link */}
-                <a href="/" className="header__link">
-                    <div className="header__option">
-                        <span className="header__optionLineOne">Hello LEE</span>
-                        <span className="header__optionLineTwo">Logout</span>
+                <Link to={!user && "/login"} className="header__link">
+                    <div onClick={login} className="header__option">
+                        <span className="header__optionLineOne">Hello {user?.email}</span>
+                        <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign in'}</span>
                     </div>
-                </a>
+                </Link>
                 {/* 2nd link */}
-                <a href="/" className="header__link">
+                <Link to="/" className="header__link">
                     <div className="header__option">
                         <span className="header__optionLineOne">Returns</span>
                         <span className="header__optionLineTwo">& Orders</span>
                     </div>
-                </a>
+                </Link>
                 {/* 3rd link */}
-                <a href="/" className="header__link">
+                <Link to="/" className="header__link">
                     <div className="header__option">
                         <span  className="header__optionLineOne">Your</span>
                         <span className="header__optionLineTwo">Prime</span>
                     </div>
-                </a>
+                </Link>
                 {/* 4th link */}
                 <Link to={`/checkout`} className="header__link">
                     <div className="header__optionBasket"></div>
@@ -47,7 +56,7 @@ const Header = () => {
                             <BsFillBasket2Fill />
                         </i>
                         {/* Number of items in the basket */}
-                        <span className="header__basketCount">0</span>
+                        <span className="header__basketCount">{basket?.length}</span>
                 </Link>
             </div>
     </nav>
